@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<script type="text/javascript" src="_lib/jquery.js"></script>
+<script type="text/javascript" src="_lib/jquery.cookie.js"></script>
+<script type="text/javascript" src="_lib/jquery.hotkeys.js"></script>
+<script type="text/javascript" src="jquery.jstree.js"></script>
+<head>
+    <title>Hello World</title>
+</head>
+<body>
+    <div id="demo1" class="demo">
+    </div>
+    <script type="text/javascript">
+        function updateTree(str)
+        {
+            $(function () {
+                $("#demo1").jstree({
+                    "json_data": jQuery.parseJSON(str),
+                    "plugins": ["themes", "json_data", "ui", "crrm", "hotkeys"]
+                });
+            });
+        }
+        function alertNativeObject(str) {
+            alert("Welcome to monospace " + nativeObject.Year);
+        }
+    </script>
+</body>
+</html>
